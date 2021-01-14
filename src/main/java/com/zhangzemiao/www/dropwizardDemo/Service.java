@@ -4,9 +4,11 @@ import com.zhangzemiao.www.dropwizardDemo.bundle.CrossOriginFilterBundle;
 import com.zhangzemiao.www.dropwizardDemo.bundle.SupportSwaggerBundle;
 import com.zhangzemiao.www.dropwizardDemo.configuration.ServiceConfiguration;
 import com.zhangzemiao.www.dropwizardDemo.resources.HelloWorldResource;
+import com.zhangzemiao.www.dropwizardDemo.servlet.IndexEndpoint;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import org.eclipse.jetty.servlet.ServletHolder;
 
 /**
  * @Desc: main class for APP
@@ -39,6 +41,8 @@ public class Service extends Application<ServiceConfiguration> {
         );
 
         environment.jersey().register(HelloResource);
+        //default index page support
+        environment.getApplicationContext().addServlet(new ServletHolder(new IndexEndpoint()), "");
     }
 
 }
