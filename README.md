@@ -3,7 +3,7 @@
 2. [JDK](#jdk)
 3. [Maven](#maven)
 4. [Build&Running](#building)
-5. [Swagger](#swagger)
+5. [Index](#index)
 
 
 ## Dropwizard Demo Project <a name="introduction"></a>
@@ -35,5 +35,8 @@ Debug
 Testing
 > http://localhost:8080/hello
 
-## Swagger  <a name="swagger"></a>
+## Index  <a name="index"></a>
+> http://localhost:8080
+
+### Swagger
 > http://localhost:8080/swagger
