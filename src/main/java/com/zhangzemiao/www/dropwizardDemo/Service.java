@@ -1,5 +1,6 @@
 package com.zhangzemiao.www.dropwizardDemo;
 
+import com.zhangzemiao.www.dropwizardDemo.bundle.SupportSwaggerBundle;
 import com.zhangzemiao.www.dropwizardDemo.configuration.ServiceConfiguration;
 import com.zhangzemiao.www.dropwizardDemo.resources.HelloWorldResource;
 import io.dropwizard.Application;
@@ -24,7 +25,8 @@ public class Service extends Application<ServiceConfiguration> {
 
     @Override
     public void initialize(Bootstrap<ServiceConfiguration> bootstrap) {
-        // nothing for now
+        // swagger
+        bootstrap.addBundle(new SupportSwaggerBundle());
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.zhangzemiao.www.dropwizardDemo.resources;
 
 import com.codahale.metrics.annotation.Timed;
 import com.zhangzemiao.www.dropwizardDemo.domain.valueobject.Saying;
+import io.swagger.annotations.Api;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 import javax.ws.rs.GET;
@@ -18,6 +19,7 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/hello")
 @Produces(MediaType.APPLICATION_JSON)
+@Api("Hello World API")
 public class HelloWorldResource {
 
     private final String template;
