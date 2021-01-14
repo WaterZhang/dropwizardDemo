@@ -1,5 +1,6 @@
 package com.zhangzemiao.www.dropwizardDemo;
 
+import com.zhangzemiao.www.dropwizardDemo.bundle.CrossOriginFilterBundle;
 import com.zhangzemiao.www.dropwizardDemo.bundle.SupportSwaggerBundle;
 import com.zhangzemiao.www.dropwizardDemo.configuration.ServiceConfiguration;
 import com.zhangzemiao.www.dropwizardDemo.resources.HelloWorldResource;
@@ -27,6 +28,7 @@ public class Service extends Application<ServiceConfiguration> {
     public void initialize(Bootstrap<ServiceConfiguration> bootstrap) {
         // swagger
         bootstrap.addBundle(new SupportSwaggerBundle());
+        bootstrap.addBundle(new CrossOriginFilterBundle());
     }
 
     @Override
