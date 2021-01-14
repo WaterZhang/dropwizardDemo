@@ -1,2 +1,6 @@
 template: Hellos, %s!
-defaultName: Strangers
+defaultName: test
+
+useSwagger: false
+swagger:
+  resourcePackage: com.zhangzemiao.www.dropwizardDemo.resources

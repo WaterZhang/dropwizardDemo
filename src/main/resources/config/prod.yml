@@ -1,7 +1,6 @@
 template: Hello, %s!
-defaultName: dev
+defaultName: prod
 
-useSwagger: true
+useSwagger: false
 swagger:
   resourcePackage: com.zhangzemiao.www.dropwizardDemo.resources
-
