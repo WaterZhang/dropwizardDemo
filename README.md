@@ -24,7 +24,9 @@ Clean & Build
 
 Running
 > mvn exec:java
+
 OR
+
 > java -Dapplication.name=dropwizardDemo -Dapplication.home=. -Dapplication.environment=dev  -jar target/dropwizardDemo-1.0-SNAPSHOT.jar server target/classes/config/dev.yml 
 
 Debug
