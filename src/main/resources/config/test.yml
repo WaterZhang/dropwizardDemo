@@ -1,6 +1,26 @@
 template: Hellos, %s!
 defaultName: test
 
+server:
+  adminContextPath: /admin
+  requestLog:
+    appenders:
+      - type: file
+        currentLogFilename: logs/dropwizard-demo-access.log
+        archive: true
+        archivedLogFilenamePattern: logs/dropwizard-demo-access-%i.log.gz
+        timeZone: UTC
+        maxFileSize: 10MB
+
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: logs/dropwizard-demo-error.log
+      archive: true
+      archivedLogFilenamePattern: logs/dropwizard-demo-error-%i.log.gz
+      maxFileSize: 10MB
+
 useSwagger: false
 swagger:
   resourcePackage: com.zhangzemiao.www.dropwizardDemo.resources
